@@ -4,9 +4,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-
-my_dir = "C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet"
-
+import os
+my_dir = os.getcwd()
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -128,14 +127,14 @@ class Ui_MainWindow(object):
             "border-image: url(source/None.png);color:rgb(255,255,255);font-size:26px;font-family:Microsoft YaHei;")
 
         self.left_mini.setStyleSheet(
-            "QPushButton{border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/mini.png);border-radius:5px;}"
-            "QPushButton:hover{border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/mini2.png);border-radius:5px;}")
+            "QPushButton{border-image: url(image/mini.png);border-radius:5px;}"
+            "QPushButton:hover{border-image: url(image/mini2.png);border-radius:5px;}")
         self.left_close.setStyleSheet(
-            "QPushButton{border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/close.png);border-radius:5px;}"
-            "QPushButton:hover{border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/close2.png);border-radius:5px;}")
+            "QPushButton{border-image: url(image/close.png);border-radius:5px;}"
+            "QPushButton:hover{border-image: url(image/close2.png);border-radius:5px;}")
         self.left_max.setStyleSheet(
-            "QPushButton{border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/max.png);border-radius:5px;}"
-            "QPushButton:hover{border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/max2.png);border-radius:5px;}")
+            "QPushButton{border-image: url(image/max.png);border-radius:5px;}"
+            "QPushButton:hover{border-image: url(image/max2.png);border-radius:5px;}")
 
         self.left_widget.setStyleSheet('''
                     QPushButton{border:none;color:white;}
@@ -151,7 +150,7 @@ class Ui_MainWindow(object):
         self.right_widget.setStyleSheet('''
                     QWidget#right_widget{
                         color:#232C51;
-                        border-image: url(C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/bc.jpg);
+                        border-image: url(image/bc.jpg);
                         background:white;
                         border-top:1px solid darkGray;
                         border-bottom:1px solid darkGray;
@@ -167,8 +166,8 @@ class Ui_MainWindow(object):
                     }
                 ''')
 
-        self.labelCamera.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image\shot.png"))
-        self.labelCapture.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image\shot.png"))
+        self.labelCamera.setPixmap(QPixmap("image/shot.png"))
+        self.labelCapture.setPixmap(QPixmap("image/shot.png"))
 
         # self.setWindowState(Qt.WindowMaximized)
         self.main_layout.setSpacing(0)

@@ -13,7 +13,8 @@ from PyQt5.QtWidgets import QFileDialog, QMainWindow
 from PyQt5.QtWidgets import QMessageBox
 from ui5_3 import Ui_MainWindow
 
-my_dir = "C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet"
+import os
+my_dir = os.getcwd()
 
 
 class Result():
@@ -127,8 +128,8 @@ class PyQtMainEntry(QMainWindow, Ui_MainWindow):
         self._timer.stop()
         self.timer_detection.stop()
 
-        self.labelCamera.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/shot.png"))
-        self.labelCapture.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/shot.png"))
+        self.labelCamera.setPixmap(QPixmap(my_dir + "/image/shot.png"))
+        self.labelCapture.setPixmap(QPixmap(my_dir + "/image/shot.png"))
         self.labelResult.setText("")
 
     def btnOpenCamera_Clicked(self):
@@ -145,8 +146,8 @@ class PyQtMainEntry(QMainWindow, Ui_MainWindow):
             self._timer.stop()
             self.timer_detection.stop()
 
-            self.labelCamera.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/shot.png"))
-            self.labelCapture.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/shot.png"))
+            self.labelCamera.setPixmap(QPixmap(my_dir + "/image/shot.png"))
+            self.labelCapture.setPixmap(QPixmap(my_dir + "/image/shot.png"))
 
     def btnshoot_Clicked(self):
         if not self.is_camera_opened:
@@ -293,9 +294,9 @@ class PyQtMainEntry(QMainWindow, Ui_MainWindow):
         self.labelResult.setText(output_ans)
 
     def btnShow_Clicked(self):
-        self.labelCamera.setPixmap(QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/datashow.jpg"))
+        self.labelCamera.setPixmap(QPixmap(my_dir + "/image/datashow.jpg"))
         self.labelCapture.setPixmap(
-            QPixmap("C:/Users/Comigam/Mycode/safety_helmet2/safety_helmet/image/datashow_3.jpg"))
+            QPixmap(my_dir + "/image/datashow_3.jpg"))
 
     def btnclose_Clicked(self):  # 关闭
         if os.path.exists(self.filename):
